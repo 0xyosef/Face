@@ -1,0 +1,149 @@
+:root {
+    --hair-color: #424b54;
+    --skin-color: #f0beaf;
+}
+
+body {
+    background-color: #ebd8d0;
+}
+
+.human {
+    margin: auto;
+    background-color: #f0beaf;
+    width: 220px;
+    height: 220px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hair {
+    background-color: var(--hair-color);
+    width: 120px;
+    height: 180px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-right-radius: 80px;
+    border-top-left-radius: 80px;
+    z-index: 1;
+}
+
+.face {
+    background-color: var(--skin-color);
+    width: 70px;
+    height: 80px;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    border-radius: 0 0 80px 80px;
+}
+
+.face::before {
+    content: '';
+    background-color: var(--hair-color);
+    width: 60px;
+    height: 40px;
+    position: absolute;
+    top: -24px;
+    left: -5px;
+    box-shadow: 40px 10px 0 -8px var(--hair-color);
+    border-radius: 50px;
+}
+
+.eye {
+    background-color: var(--hair-color);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 27px;
+    left: 8px;
+    box-shadow: 42px 0 0 var(--hair-color);
+    border-radius: 50%;
+}
+
+.eye::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -1px;
+    width: 12px;
+    height: 2px;
+    background: #626f7d;
+    box-shadow: 42px 0 0 #626f7d;
+    border-radius: 10px;
+}
+
+.nose {
+    background: #db9b99;
+    width: 8px;
+    height: 16px;
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 13px;
+}
+
+.mouth {
+    position: absolute;
+    top: 52px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 15px;
+    background-color: var(--hair-color);
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+}
+
+.mouth::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 6px;
+    width: 24px;
+    height: 20px;
+    background-color: #f6828c;
+    border-radius: 50%;
+}
+
+.cheek {
+    position: absolute;
+    bottom: 30px;
+    left: 5px;
+    width: 10px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #eba8a8;
+    box-shadow: 48px 0 0 #eba8a8;
+}
+
+.neck {
+    background-color: var(--skin-color);
+    width: 27px;
+    height: 25px;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50px;
+}
+
+.body {
+    background-color: #bb004f;
+    width: 98px;
+    height: 80px;
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border-radius: 50px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 50px;
+}
